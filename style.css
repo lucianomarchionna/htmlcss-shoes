@@ -8,39 +8,54 @@
 
 /* common */
 
+html{
+    /* serve per scrollare più lentamente la pagina */
+    scroll-behavior: smooth;
+}
+
 body{
+    /* font preso da google */
     font-family: 'Rubik Mono One', sans-serif;
 }
 
-.container{
-    width: 80%;
-    margin: 0 auto;
-}
 
 nav{
+    /* per far rimanere i pallini fermi durante lo scrolling delle pagine */
     position: fixed;
+    /* per far andare i pallini sopra la pagina */
     z-index: 1;
-    float: left;
-    margin-left: 63%;
+    /* per spostare i pallini a dedstra */
+    margin-left: 80%;
 } 
 
 nav li{
+    /* per mettere in riga i pallini */
     display: inline-block;
+    /* per togliere alla lista creato i pallini di fianco */
     list-style: none;
 }
 
 nav li a{
+    /* trasformo i numeri in blocco per assegnarli delle dimensioni */
     display: block;
     width: 50px;
     height: 50px;
     margin: 40px 20px;
     background-color: white;
+    /* trasformo il blocco in cerchio tagliando gli angoli */
     border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+    /* aggiungo ai pallini */
+    box-shadow: 3px 6px rgba(0 0 0 / 16%);
     line-height: 50px;
     text-align: center;
+    /* rimuovo le decorazioni (in questo caso il sottolineato) */
     text-decoration: none;
-    color: black;
+    color: black; 
+}
+
+nav li a:hover{
+    /* ingrandisco l'ombra ai pallini quando ci passo sopra con il mouse */
+    box-shadow: 15px 6px rgba(0 0 0 / 16%);
 }
 
 .page{
@@ -66,6 +81,7 @@ nav li a{
 
 .block{
     position: absolute;
+    /* assegno al blocco (contenento immagine e testo) la posizione centrale */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
